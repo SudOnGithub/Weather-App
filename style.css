@@ -1,0 +1,170 @@
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 100;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("./default2.jpg");
+  background-size: cover;
+  height: fit-content;
+}
+
+input {
+  text-align: center;
+}
+
+.container {
+  border: 2px solid white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weatherForm {
+  text-align: center;
+  margin: 20px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  padding: 20px 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color: white;
+}
+
+.cityInput {
+  font-size: 2rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+i {
+  font-size: 2rem;
+  padding: 0px 10px;
+}
+
+.cityInput::placeholder {
+  color: white;
+  letter-spacing: 5px;
+}
+
+.cityInput:focus {
+  color: white;
+  letter-spacing: 5px;
+  caret-color: transparent;
+}
+
+.cityInput:focus::placeholder {
+  opacity: 0;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.315);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: rgba(255, 255, 255, 0.565);
+}
+
+.card, .card1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+p {
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+
+.cityDisplay,
+.tempDisplay {
+  color: white;
+}
+
+.cityDisplay {
+  letter-spacing: 5px;
+  display: flex;
+  gap: 20px;
+}
+
+.tempDisplay {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.descDisplay {
+  font-style: italic;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.weatherEmoji {
+  margin: 0;
+  font-size: 4rem;
+}
+
+.errorDisplay {
+  font-size: 2.5rem;
+  color: hsl(0, 0%, 0%, 0.75);
+}
+
+.otherDisplay {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.otherDisplay1 {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.otherDisplay1 i{
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background: url("./defaultphone.jpg");
+    background-size: cover;
+    height: 100vh;
+  }
+  .cityInput {
+    font-size: 1rem;
+  }
+  i {
+    font-size: 1rem;
+  }
+  button[type="submit"] {
+    padding: 10px 10px;
+    font-size: 1rem;
+  }
+  .weatherEmoji {
+    margin: 0;
+    font-size: 3rem;
+  }
+  .tempDisplay {
+    font-size: 5rem;
+    font-weight: bold;
+  }
+}
